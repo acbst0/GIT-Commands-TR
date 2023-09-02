@@ -1,0 +1,56 @@
+git config --global user.name "acbst0"
+git config --list
+
+pwd //dosya yolunu gösterir
+cd .. //üst klasöre geçer
+mkdir //dosya oluştur
+touch //belge oluştur
+ls
+
+git init
+git status
+git add <dosya>
+git commit -m "mesaj"
+
+git log
+git log --oneline
+
+git checkout <commit id> -- .
+
+git diff
+git diff <dosya adı>
+
+git reset HEAD <dosya adı>
+git checkout -- <dosya adı>
+
+git remove <dosya adı>
+git rm -r <klasör adı>/
+
+git mv <dosya adı> <yeni adı>
+git mv <dosya adı> <klasör adı>/
+git mv <dosya adı> <klasör adı>/<yeni adı>
+
+git config --global alias.<kısaltma> <kısaltılacak kavram>
+
+git remote add origin <git hub url>
+git push -u origin master
+git pull
+
+touch .gitignore
+.gitignore içersine kullanıma kapatılacak dosyalar yazılmalı. Örneğin;
+
+<dosya adı> //yazılan dosyayı kapatır
+<klasör adı>/* //o klasörün altındaki bütün dosyaları kullanıma kapatır
+!<klasör adı>/<dosya adı> //belirtilen klasörün altındaki dosyayı kullanıma kapatmaz.
+
+git branch
+git branch <yeni branch adı>
+git branch --all
+git fetch
+git checkout <geçilecek branch ismi>
+git pull origin <branch name>
+
+git merge dev //bu işlemden sonra push işlemi yapılmalı
+
+git fetch -p //eğer bazı brenchler onlineda silindiyse sizdende kaldırır
+git branch -D <branch adı> //localden branchi silme işlemi
